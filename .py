@@ -999,9 +999,9 @@ def menu():
     elif unik in['8','08']:
     	useragent()
     elif unik in['9','09']:
-    	print "\n%s [01] Hasil crack akun facebook "%(P)
-        print "%s [02] Hasil crack akun instagram "%(P)
-        c = raw_input('\n%s [?] Menu : %s'%(P,K))
+    	print "\n%s \x1b[1;93m[\x1b[1;96m01\x1b[1;93m] \x1b[1;96mHasil crack akun facebook "%(P)
+        print "%s \x1b[1;93m[\x1b[1;96m02\x1b[1;93m] \x1b[1;96mHasil crack akun instagram "%(P)
+        c = raw_input('\n%s [?] \x1b[1;93mMenu : %s'%(P,K))
     	hasill(c)
     elif unik in['10','100']:
         file_cp()
@@ -1024,64 +1024,64 @@ def menu_ig():
 
 def hasill(c):
 	if c in[""]:
-		print ("%s[%s!%s] isi yang benar kentod"%(P,M,P));exit()
+		print ("%s[%s!%s] \x1b[1;91misi yang benar kentod"%(P,M,P));exit()
 	elif c in["1","01"]:
 		try:
 			dirs = os.listdir("hasil")
 			print ("")
 			for file in dirs:
 				print("%s -> %s%s"%(K,P,file));jeda(0.2)
-			print("\n %s[%s!%s] cth : CP-%s-%s-%s%s"%(P,M,P,ha,op,ta,".txt"))
-			file = raw_input("%s [?] masukan file : "%(P));jeda(0.2)
+			print("\n %s[%s!%s] \x1b[1;93mcth : CP-%s-%s-%s%s"%(P,M,P,ha,op,ta,".txt"))
+			file = raw_input("%s [?] \x1b[1;96mmasukan file : "%(P));jeda(0.2)
 			if file == "":
-				print("%s [!] file tidak ada "%(M))
+				print("%s [!] \x1b[1;91mfile tidak ada "%(M))
 			total = open("hasil/%s"%(file)).read().splitlines()
 			print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
 			nm_file = ("%s"%(file)).replace("-", " ")
-			jalan(" [%s*%s] total akun : %s"%(K,P,len(total)))
+			jalan(" [%s*%s] \x1b[1;93mtotal akun : %s"%(K,P,len(total)))
 			print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
 			for akun in total:
 				fb = akun.replace("\n","")
 				tling  = fb.replace(" *--> ", " *-->").replace(" *-->", " *--> ")
 				print(tling);jeda(0.03)
 			print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
-			raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
+			raw_input('\n%s \x1b[1;93m[ %s\x1b[1;92mKEMBALI %s\x1b[1;93m] '%(P,K,P));menu()
 		except (IOError):
-			print("\n%s [!] tidak ada hasil "%(M))
-			raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
+			print("\n%s [!] \x1b[1;91mtidak ada hasil "%(M))
+			raw_input('\n%s \x1b[1;93m[ %s\x1b[1;92mKEMBALI %s\x1b[1;93m] '%(P,K,P));menu()
 	elif c in["2","02"]:
-		print "\n%s [01] Hasil crack akun %sOK "%(P,H)
-        print "%s [02] Hasil crack akun %sCP "%(P,K)
+		print "\n%s \x1b[1;93m[\x1b[1;96m01\x1b[1;93m] \x1b[1;96mHasil crack akun %sOK "%(P,H)
+        print "%s \x1b[1;93m[\x1b[1;96m02\x1b[1;93m] \x1b[1;96mHasil crack akun %sCP "%(P,K)
         while True:
         	rom = raw_input('\n%s [?] Menu : %s'%(P,K))
 		if rom in['1','01']:
 			try:
 				oke = open("okeh.txt", "r").readlines()
 				print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
-				jalan(" [%s*%s] total akun : %s%s"%(K,P,H,str(len(oke))))
+				jalan(" [%s*%s] \x1b[1;93mtotal akun : %s%s"%(K,P,H,str(len(oke))))
 				print(" %s[%s*%s] --------------------------------------%s"%(P,K,P,H));jeda(2)
 				okek = open("okeh.txt", "r").read()
 				print (okek)
 				exit(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
 			except IOError,KeyError:
-				exit (M+"\n [!] tidak ada hasil awokawokawok")
+				exit (M+"\n [!] \x1b[1;91mtidak ada hasil awokawokawok")
 		elif rom in['2','02']:
 			try:
 				cepe = open("cepeh.txt", "r").readlines()
 				print(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
-				jalan(" [%s*%s] total akun : %s%s"%(K,P,K,str(len(cepe))))
+				jalan(" [%s*%s] \x1b[1;93mtotal akun : %s%s"%(K,P,K,str(len(cepe))))
 				print(" %s[%s*%s] --------------------------------------%s"%(P,K,P,K));jeda(2)
 				cepek = open("cepeh.txt", "r").read()
 				print (cepek)
 				exit(" %s[%s*%s] --------------------------------------"%(P,K,P));jeda(2)
 			except IOError,KeyError:
-				exit (M+"\n [!] tidak ada hasil awokawokawok")
+				exit (M+"\n [!] \x1b[1;91mtidak ada hasil awokawokawok")
 		else:
 			exit()
 def igg():
-	print ("\n%s [%s!%s] Cth nama %s: %sRomi "%(P,M,P,M,K))
-	usr_ = raw_input('%s [?] Input nama > %s'%(P,K))
-	jumlah = input('%s [?] Limit user > %s'%(P,K))
+	print ("\n%s [%s!%s] \x1b[1;96mCth nama %s: %sRani "%(P,M,P,M,K))
+	usr_ = raw_input('%s [?] \x1b[1;96mInput nama > %s'%(P,K))
+	jumlah = input('%s [?] \x1b[1;96mLimit user > %s'%(P,K))
 	bff_2 = usr_.replace(" ", "")
 	cr.append("romi_afrizal")
 	mi.append(bff_2+"|"+bff_2)
