@@ -1025,9 +1025,7 @@ def menu_ig():
 	os.system("python2 yakuzaXsuzuran.py")
 # pastikan taruh file ya yang sama directoryokh
 def igf():
-    jalan(' [*] Sihlahkan ketik git pull dan ketik ulang python2 .py\n 
-[*] sihlahkan tunggu update terbaru terimakasih')
-[*] Btw lu anak mana sih muka nya ke anjing soal ny wkwkwk')
+    jalan(' [*] Sihlahkan ketik git pull dan ketik ulang python2 .py\n [*] sihlahkan tunggu update terbaru terimakasih\n  [*] Btw lu anak mana sih muka nya ke anjing soal ny wkwkwk')
 
 def hasill(c):
 	if c in[""]:
