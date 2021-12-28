@@ -831,7 +831,7 @@ def cek(arg):
 	else:return False
 
 #cek ingfo
-def cek_ingfo(kontol):
+def cek_ingfo():
     try:
         user = raw_input("\n [%s+%s] masukan id atau username : "%(O,N))
         if user == '':
@@ -1209,7 +1209,7 @@ def menu():
     elif unik in['14','140']:
     	menu_ig()
     elif unik in['15','150']:
-        cek_ingfo(kontol)
+        cek_ingfo()
     elif unik in['0','00']:
         print ('')
         tik();jeda(1);os.system('rm -rf token.txt')
