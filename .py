@@ -978,6 +978,7 @@ def menu():
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m11%s\x1b[1;93m] \x1b[1;97mGabung group \x1b[1;93m[\x1b[1;96mFacebook\x1b[1;93m]'%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m12%s\x1b[1;93m] \x1b[1;97mInfo script \x1b[1;93m[\x1b[1;96mAuthor\x1b[1;93m]'%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m13%s\x1b[1;93m] \x1b[1;97mMenu Crack \x1b[1;93m[\x1b[1;96mIgeh><\x1b[1;93m]'%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m14%s\x1b[1;93m] \x1b[1;93mUpdate tools '%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m00%s\x1b[1;93m] \x1b[1;91mHapus token '%(M,P))
     unik = raw_input('\n%s [?] Menu : %s'%(P,K))
     if unik == '':
@@ -1011,6 +1012,8 @@ def menu():
         info_tools()
     elif unik in['13','130']:
     	menu_ig()
+    elif unik in['14','140']:
+        igg()
     elif unik in['0','00']:
         print ('')
         tik();jeda(1);os.system('rm -rf token.txt')
