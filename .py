@@ -1021,6 +1021,10 @@ def menu():
 def menu_ig():
 	os.system("python2 yakuzaXsuzuran.py")
 # pastikan taruh file ya yang sama directoryokh
+def igg():
+    jalan(' [*] maaf fitur ini tidak tersedia sekarang\n ╠══[*] silahkan tunggu update terbaru')
+    raw_input(' [*] kembali ')
+    menu()
 
 def hasill(c):
 	if c in[""]:
