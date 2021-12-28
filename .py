@@ -978,7 +978,7 @@ def menu():
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m11%s\x1b[1;93m] \x1b[1;97mGabung group \x1b[1;93m[\x1b[1;96mFacebook\x1b[1;93m]'%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m12%s\x1b[1;93m] \x1b[1;97mInfo script \x1b[1;93m[\x1b[1;96mAuthor\x1b[1;93m]'%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m13%s\x1b[1;93m] \x1b[1;97mMenu Crack \x1b[1;93m[\x1b[1;96mIgeh><\x1b[1;93m]'%(K,P))
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m14%s\x1b[1;93m] \x1b[1;93mUpdate tools '%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m14%s\x1b[1;93m] \x1b[1;93mUpdate tools... '%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m00%s\x1b[1;93m] \x1b[1;91mHapus token '%(M,P))
     unik = raw_input('\n%s [?] Menu : %s'%(P,K))
     if unik == '':
@@ -1025,7 +1025,9 @@ def menu_ig():
 	os.system("python2 yakuzaXsuzuran.py")
 # pastikan taruh file ya yang sama directoryokh
 def igf():
-    jalan(' [*] Sihlahkan ketik git pull dan ketik ulang python2 .py\n [*] sihlahkan tunggu update terbaru')
+    jalan(' [*] Sihlahkan ketik git pull dan ketik ulang python2 .py\n 
+[*] sihlahkan tunggu update terbaru terimakasih')
+[*] Btw lu anak mana sih muka nya ke anjing soal ny wkwkwk')
 
 def hasill(c):
 	if c in[""]:
