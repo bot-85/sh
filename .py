@@ -730,6 +730,41 @@ def namah(sim,r,b):
 			namah(sim,r,i["href"])
 	print ('\n\n%s%s Succes dump id pencarian nama '%(H,til));print ('%s%s%s File dump tersimpan %s>%s %s '%(U,til,O,M,H,sim));raw_input('\n%s%s%s [%s Enter%s ] '%(U,til,O,U,O));menu()
 
+# DUMP PESAN
+class pesan:
+
+    def __init__(self, cookies):
+        self.cookies = cookies
+        #__romz__()
+        #os.system("clear")
+        self.f = raw_input('\n%s%s%s Nama file%s >%s '%(U,til,O,M,K)).replace(' ', '_')
+        if self.f == '':
+            pesan(cookies)
+        open(self.f, 'w').close()
+        self.dump('https://mbasic.facebook.com/messages')
+    def dump(self,url):
+    	open(self.f, 'a+')
+        bs = bs4.BeautifulSoup(requests.get(url, headers=hdcok(), cookies=self.cookies).text, 'html.parser')
+        print ("\r%s%s%s mengumpulkan id %s> %s%s \x1b[1;97m- mohon tunggu\r"%(U,til,O,M,H,str(len(open(self.f).read().splitlines()))));sys.stdout.flush();jeda(0.0050)
+        for i in bs.find_all('a', href=True):
+            if '/messages/read' in i.get('href'):
+                f = bs4.re.findall('cid\\.c\\.(.*?)%3A(.*?)&', i.get('href'))
+                try:
+                    for ip in list(f.pop()):
+                        if self.cookies.get(' c_user') in ip:
+                            continue
+                        else:
+                            if 'pengguna facebook' in i.text.lower():
+                                continue
+                            open(self.f, 'a+').write('%s<=>%s\n' % (ip, i.text))
+                except Exception as e:
+                    continue
+            if 'Lihat Pesan Sebelumnya' in i.text:
+                self.dump('https://mbasic.facebook.com/' + i.get('href'))
+        print ('\n%s%s Succes dump id pesan mesengger '%(H,til))
+        print ('%s%s%s File dump tersimpan %s>%s %s '%(U,til,O,M,H,self.f))
+        raw_input('\n%s%s%s [%s Enter%s ] '%(U,til,O,U,O));menu()
+
 # DUMP GROUP
 class group:
 	
@@ -993,15 +1028,16 @@ def menu():
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m03%s\x1b[1;93m] \x1b[1;97mDump id \x1b[1;93mteman/reaction post'%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m04%s\x1b[1;93m] \x1b[1;97mDump id \x1b[1;93mpencarian nama'%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m05%s\x1b[1;93m] \x1b[1;97mDump id \x1b[1;93mAnggota grup'%(K,P))
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m06%s\x1b[1;93m] \x1b[1;97mCrack cari nama \x1b[1;93m(\x1b[1;96minstagram\x1b[1;93m) '%(K,P))
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m07%s\x1b[1;93m] %sStart crack %s'%(K,P,H,P)) 
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m08%s\x1b[1;93m] \x1b[1;97mSetting \x1b[1;93mU/A \x1b[1;93m[\x1b[1;96mUser agent\x1b[1;93m]'%(K,P)) 
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m09%s\x1b[1;93m] \x1b[1;97mChek hasil crack \x1b[1;93m[\x1b[1;96mAccount Fb\x1b[1;93m]'%(K,P)) 
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m10%s\x1b[1;93m] \x1b[1;97mChek Opsi \x1b[1;93m[\x1b[1;96mHasil Crack\x1b[1;93m]'%(K,P)) 
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m11%s\x1b[1;93m] \x1b[1;97mGabung group \x1b[1;93m[\x1b[1;96mFacebook\x1b[1;93m]'%(K,P))
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m12%s\x1b[1;93m] \x1b[1;97mInfo script \x1b[1;93m[\x1b[1;96mAuthor\x1b[1;93m]'%(K,P))
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m13%s\x1b[1;93m] \x1b[1;97mMenu Crack \x1b[1;93m[\x1b[1;96mIgeh><\x1b[1;93m]'%(K,P))
-    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m14%s\x1b[1;93m] \x1b[1;93mUpdate tools... '%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m06%s\x1b[1;93m] \x1b[1;97mDump id \x1b[1;93mPesan messenger'%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m07%s\x1b[1;93m] \x1b[1;97mCrack cari nama \x1b[1;93m(\x1b[1;96minstagram\x1b[1;93m) '%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m08%s\x1b[1;93m] %sStart crack %s'%(K,P,H,P)) 
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m09%s\x1b[1;93m] \x1b[1;97mSetting \x1b[1;93mU/A \x1b[1;93m[\x1b[1;96mUser agent\x1b[1;93m]'%(K,P)) 
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m10%s\x1b[1;93m] \x1b[1;97mChek hasil crack \x1b[1;93m[\x1b[1;96mAccount Fb\x1b[1;93m]'%(K,P)) 
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m11%s\x1b[1;93m] \x1b[1;97mChek Opsi \x1b[1;93m[\x1b[1;96mHasil Crack\x1b[1;93m]'%(K,P)) 
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m12%s\x1b[1;93m] \x1b[1;97mGabung group \x1b[1;93m[\x1b[1;96mFacebook\x1b[1;93m]'%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m13%s\x1b[1;93m] \x1b[1;97mInfo script \x1b[1;93m[\x1b[1;96mAuthor\x1b[1;93m]'%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m14%s\x1b[1;93m] \x1b[1;97mMenu Crack \x1b[1;93m[\x1b[1;96mIgeh><\x1b[1;93m]'%(K,P))
+    print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m15%s\x1b[1;93m] \x1b[1;93mUpdate tools... '%(K,P))
     print (' \x1b[1;93m[%s\x1b[1;97m\x1b[1;96m00%s\x1b[1;93m] \x1b[1;91mHapus token '%(M,P))
     unik = raw_input('\n%s [?] Menu : %s'%(P,K))
     if unik == '':
@@ -1017,25 +1053,27 @@ def menu():
     elif unik in['5','05']:
         group(__romz__())
     elif unik in['6','06']:
-    	igg()
+        pesan(__romz__())
     elif unik in['7','07']:
-        ngentod().romiy()
+    	igg()
     elif unik in['8','08']:
-    	useragent()
+        ngentod().romiy()
     elif unik in['9','09']:
+    	useragent()
+    elif unik in['10','100']:
     	print "\n%s \x1b[1;93m[\x1b[1;96m01\x1b[1;93m] \x1b[1;96mHasil crack akun facebook "%(P)
         print "%s \x1b[1;93m[\x1b[1;96m02\x1b[1;93m] \x1b[1;96mHasil crack akun instagram "%(P)
-        c = raw_input('\n%s [?] \x1b[1;93mMenu : %s'%(P,K))
+        c = raw_input('\n%elif unik in['6','06']:s [?] \x1b[1;93mMenu : %s'%(P,K))
     	hasill(c)
-    elif unik in['10','100']:
-        file_cp()
     elif unik in['11','110']:
-        os.system("xdg-open https://www.facebook.com/groups/924679595149360")
+        file_cp()
     elif unik in['12','120']:
-        info_tools()
+        os.system("xdg-open https://www.facebook.com/groups/924679595149360")
     elif unik in['13','130']:
-    	menu_ig()
+        info_tools()
     elif unik in['14','140']:
+    	menu_ig()
+    elif unik in['15','150']:
         igf()
     elif unik in['0','00']:
         print ('')
