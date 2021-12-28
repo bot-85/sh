@@ -287,24 +287,24 @@ class ngentod:
         self.id = []
     def romiy(self):
         try:
-            self.apk = raw_input('\n %s[?] \x1b[1;93mfile dump :%s '%(P,K))
+            self.apk = raw_input('\n %s[?] file dump :%s '%(P,K))
             self.id = open(self.apk).read().splitlines()
-            print '%s [%s*%s] \x1b[1;93mjumlah id : %s%s' %(P,K,P,H,len(self.id))
+            print '%s [%s*%s] jumlah id : %s%s' %(P,K,P,H,len(self.id))
         except:
-            print '\n%s [!] \x1b[1;93mKemungkinan anda blum dump id'%(M)
-            raw_input('\n%s \x1b[1;92m[ %s\x1b[1;93mKEMBALI %s\x1b[1;92m] '%(P,K,P));menu()
-        unikers = raw_input('%s [?] \x1b[1;93mingin gunakan password manual? \x1b[1;92m[\x1b[1;93my\x1b[1;97m/\x1b[1;92mt\x1b[1;93m] :%s '%(P,K))
+            print '\n%s [!] File dump tidak ada, dump id dulu kentod'%(M)
+            raw_input('\n%s [ %senter %s] '%(P,K,P));menu()
+        unikers = raw_input('%s [?] ingin gunakan password manual? [y/t] :%s '%(P,K))
         if unikers in ('Y', 'y'):
-            print '\n %s[%s!%s] \x1b[1;93mcth : %s\x1b[1;93msayang,anjing%s \x1b[1;93mgunakan , (koma) untuk pemisah '%(P,M,P,H,P)
+            print '\n %s[%s!%s] cth : %ssayang,anjing%s gunakan , (koma) untuk pemisah '%(P,M,P,H,P)
             while True:
-                pwx = raw_input(' %s[?] \x1b[1;93mset password :%s '%(P,K))
+                pwx = raw_input(' %s[?] set password :%s '%(P,K))
                 if pwx == '':
-                    print '\n %s[!] \x1b[1;93mjangan kosong '%(M)
+                    print '\n %s[!] jangan kosong '%(M)
                 elif len(pwx)<=5:
-                    print '\n %s[!] \x1b[1;93m\x1b[1;93mpassword minimal 6 karakter'%(M)
+                    print '\n %s[!] password minimal 6 karakter'%(M)
                 else:
                     def zona(zafi_=None): 
-                        ind = raw_input('\n %s[?] \x1b[1;93mmethode : %s'%(P,K))
+                        ind = raw_input('\n %s[?] methode : %s'%(P,K))
                         if ind == '':
                             print("%s [!] Isi yang benar kentod "%(M));self.zona()
                         elif ind in ('1', '01'):
@@ -342,17 +342,17 @@ class ngentod:
                             os.remove(self.apk);exit()
                         else:
                             print ('\n %s[!] isi yang benar kentod'%(M));zona()
-                    print '\n%s \x1b[1;97m[ \x1b[1;96mpilih methode crack - silahkan coba satu² \x1b[1;97m]\n'%(P)
-                    print ' \x1b[1;93m[%s\x1b[1;96m01%s\x1b[1;93m] \x1b[1;93mmethode b-api (crack cepat)'%(K,P)
-                    print ' \x1b[1;93m[%s\x1b[1;96m02%s\x1b[1;93m] \x1b[1;92mmethode mbasic (crack lambat)'%(K,P)
-                    print ' [%s03%s] \x1b[1;97mmethode mobile (crack sangat lambat) '%(K,P)
+                    print '\n%s [ pilih methode crack - silahkan coba satu² ]\n'%(P)
+                    print ' [%s01%s] methode b-api (crack cepat)'%(K,P)
+                    print ' [%s02%s] methode mbasic (crack lambat)'%(K,P)
+                    print ' [%s03%s] methode mobile (crack sangat lambat) '%(K,P)
                     zona(pwx.split(','))
                     break
         elif unikers in ('T', 't'):
-            print '\n%s \x1b[1;97m[ \x1b[1;96mpilih methode crack - silahkan coba satu² \x1b[1;97m]\n'%(P)
-            print ' \x1b[1;93m[%s\x1b[1;96m01%s\x1b[1;93m] \x1b[1;93mmethode b-api (crack cepat)'%(K,P)
-            print ' \x1b[1;93m[%s\x1b[1;96m02%s\x1b[1;93m] \x1b[1;92mmethode mbasic (crack lambat)'%(K,P)
-            print ' \x1b[1;93m[%s\x1b[1;96m03%s\x1b[1;93m] \x1b[1;97mmethode mobile (crack sangat lambat) '%(K,P)
+            print '\n%s [ pilih methode crack - silahkan coba satu² ]\n'%(P)
+            print ' [%s01%s] methode b-api (crack cepat)'%(K,P)
+            print ' [%s02%s] methode mbasic (crack lambat)'%(K,P)
+            print ' [%s03%s] methode mobile (crack sangat lambat) '%(K,P)
             self.langsung()
         else:
             print("%s [!] Isi yang benar kentod "%(M));jeda(2);menu()
