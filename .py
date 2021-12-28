@@ -82,7 +82,7 @@ def logo():
  
  # Ubah Satu Kata Data Hp Ilang!!!!, Usahakan Jangan Asal Hapus
 CorrectUsername = "BintangTzy"
-CorrectPassword = "SanzTzy"
+CorrectPassword = "Sanz-Tzy"
 loop = "true"
 while loop == "true":
 	username = unik = raw_input("\x1b[1;93mUsername Tools : \x1b[1;96m")
@@ -94,10 +94,10 @@ while loop == "true":
 			loop = "false"
 		else:
 			print("Wrong Password")
-			os.system("xdg-open https://www.facebook.com/rendi.gerot.1")
+			os.system("xdg-open https://www.facebook.com/bintangt.zy.92")
 	else:
 		print("Wrong Username")
-		os.system("xdg-open https://www.facebook.com/rendi.gerot.1")		
+		os.system("xdg-open https://www.facebook.com/bintangt.zy.92")		
 def lisensi():
 	os.system("clear")
 	masuk()
