@@ -1063,7 +1063,7 @@ def menu():
     elif unik in['10','100']:
     	print "\n%s \x1b[1;93m[\x1b[1;96m01\x1b[1;93m] \x1b[1;96mHasil crack akun facebook "%(P)
         print "%s \x1b[1;93m[\x1b[1;96m02\x1b[1;93m] \x1b[1;96mHasil crack akun instagram "%(P)
-        c = raw_input('\n%elif unik in['10','100']:s [?] \x1b[1;93mMenu : %s'%(P,K))
+        c = raw_input('\n%s [?] \x1b[1;93mMenu : %s'%(P,K))
     	hasill(c)
     elif unik in['11','110']:
         file_cp()
