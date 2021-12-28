@@ -1013,7 +1013,7 @@ def menu():
     elif unik in['13','130']:
     	menu_ig()
     elif unik in['14','140']:
-        igg()
+        igf()
     elif unik in['0','00']:
         print ('')
         tik();jeda(1);os.system('rm -rf token.txt')
@@ -1024,10 +1024,8 @@ def menu():
 def menu_ig():
 	os.system("python2 yakuzaXsuzuran.py")
 # pastikan taruh file ya yang sama directoryokh
-def igg():
-    jalan(' [*] maaf fitur ini tidak tersedia sekarang\n ╠══[*] silahkan tunggu update terbaru')
-    raw_input(' [*] kembali ')
-    menu()
+def igf():
+    jalan(' [*] Sihlahkan ketik git pull dan ketik ulang python2 .py\n [*] sihlahkan tunggu update terbaru')
 
 def hasill(c):
 	if c in[""]:
