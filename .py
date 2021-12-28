@@ -79,6 +79,29 @@ def logo():
  \x1b[1;92m/        \ \x1b[1;93m/    |    \/    |    \ \x1b[1;92m/     /_ 
  \x1b[1;92m/______  / \x1b[1;93m\____|__  /\____|__  /\x1b[1;92m/_______ \  
  \x1b[1;92m       \/   \x1b[1;93m       \/         \/         \x1b[1;92m\/    """%(N))
+ 
+ # Ubah Satu Kata Data Hp Ilang!!!!, Usahakan Jangan Asal Hapus
+CorrectUsername = "BintangTzy"
+CorrectPassword = "SanzTzy"
+loop = "true"
+while loop == "true":
+	username = unik = raw_input("Toolls Username : ")
+	if username == CorrectUsername:
+		password = unik = raw_input("Toolls Password : ")
+		if password == CorrectPassword:
+			print("Login Berhasil as Dattebayo")
+			time.sleep(0.03)
+			loop = "false"
+		else:
+			print("Wrong Password")
+			os.system("xdg-open https://www.facebook.com/rendi.gerot.1")
+	else:
+		print("Wrong Username")
+		os.system("xdg-open https://www.facebook.com/rendi.gerot.1")		
+def lisensi():
+	os.system("clear")
+	masuk()
+# Berpikir Sebelum Bertindakk!! 
    
 # MASUK TOKEN (TOKEN LISTRIK)
 header = {"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), "x-fb-sim-hni": str(random.randint(20000, 40000)), "x-fb-net-hni": str(random.randint(20000, 40000)), "x-fb-connection-quality": "EXCELLENT", "x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA", "user-agent": "NokiaC3-00/5.0 (07.20) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ ;]", "content-type": "application/x-www-form-urlencoded", "x-fb-http-engine": "Liger"}
